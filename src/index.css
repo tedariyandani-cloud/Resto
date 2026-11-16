@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #0A0A0C;
+  --color-charcoal: #121418;
+  --color-charcoal-light: #1A1D24;
+  --color-gold: #D4AF37;
+  --color-amber-warm: #E5A93C;
+  --color-alabaster: #F4F4F6;
+  --color-silver-muted: #A1A1AA;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    background-color: #0A0A0C;
+    color: #F4F4F6;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0A0A0C;
+    color: #F4F4F6;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0A0C;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #27272A;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8) sepia(100%) saturate(300%) hue-rotate(10deg);
+    cursor: pointer;
+  }
+}
+
+.bg-gold-gradient {
+  background-image: linear-gradient(135deg, #D4AF37 0%, #E5A93C 50%, #B8860B 100%);
+}
+
+.hero-vignette {
+  background: radial-gradient(
+      circle at center,
+      rgba(10, 10, 12, 0.35) 0%,
+      rgba(10, 10, 12, 0.88) 75%,
+      #0A0A0C 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(10, 10, 12, 0.72) 0%,
+      rgba(10, 10, 12, 0.25) 45%,
+      #0A0A0C 100%
+    );
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up {
+    animation: none;
+  }
+}

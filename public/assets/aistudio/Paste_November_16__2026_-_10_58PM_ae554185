@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Lounge Jakarta | 49th Floor Rooftop & Dining — cloudloungejakarta.com</title>
+    <meta name="description" content="Experience Jakarta's premier 49th-floor rooftop lounge & dining at The Plaza Office Tower, Thamrin. Artisanal cocktails, wood-fired pizza, and 360° skyline views. Reserve at cloudloungejakarta.com.">
+    <link rel="canonical" href="https://cloudloungejakarta.com/">
+    
+    <!-- Open Graph / Social Media SEO Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cloudloungejakarta.com/">
+    <meta property="og:title" content="Cloud Lounge Jakarta | 49th Floor Rooftop & Dining">
+    <meta property="og:description" content="Above the Jakarta Skyline. Artisanal craft cocktails, global tapas, and 360-degree nocturnal vistas at The Plaza Office Tower Level 49.">
+    <meta property="og:site_name" content="cloudloungejakarta.com">
+    
+    <!-- Google Fonts: Cormorant Garamond (Luxury Serif) & Plus Jakarta Sans (Clean Geometric Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Refined Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Custom Configuration (Registered before & safely after CDN load) -->
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0A0A0C',
+                        charcoal: '#121418',
+                        charcoalLight: '#1A1D24',
+                        gold: '#D4AF37',
+                        amberWarm: '#E5A93C',
+                        alabaster: '#F4F4F6',
+                        silverMuted: '#A1A1AA',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gold-gradient': 'linear-gradient(135deg, #D4AF37 0%, #E5A93C 50%, #B8860B 100%)',
+                    }
+                }
+            }
+        };
+    </script>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Atmospheric Styles & Micro-interactions -->
+    <style>
+        /* Fallback utility classes in case Tailwind CDN takes a moment to initialize */
+        .bg-obsidian { background-color: #0A0A0C; }
+        .bg-charcoal { background-color: #121418; }
+        .text-gold { color: #D4AF37; }
+        .text-amberWarm { color: #E5A93C; }
+        .text-alabaster { color: #F4F4F6; }
+        .text-silverMuted { color: #A1A1AA; }
+        .bg-gold-gradient { background-image: linear-gradient(135deg, #D4AF37 0%, #E5A93C 50%, #B8860B 100%); }
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        body {
+            background-color: #0A0A0C;
+            color: #F4F4F6;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+
+        /* Glassmorphism Header & Cards */
+        .glass-nav {
+            background: rgba(10, 10, 12, 0.78);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-card {
+            background: rgba(18, 20, 24, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(212, 175, 55, 0.12);
+        }
+
+        /* Hairline Gold Border Utility */
+        .border-gold-hairline {
+            border-color: rgba(212, 175, 55, 0.22);
+        }
+
+        /* Ambient Glow Effects */
+        .ambient-glow {
+            position: absolute;
+            border-radius: 9999px;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Hero Vignette & Overlay */
+        .hero-vignette {
+            background: radial-gradient(circle at center, rgba(10, 10, 12, 0.35) 0%, rgba(10, 10, 12, 0.88) 75%, #0A0A0C 100%),
+                        linear-gradient(to bottom, rgba(10, 10, 12, 0.7) 0%, rgba(10, 10, 12, 0.2) 45%, #0A0A0C 100%);
+        }
+
+        /* Menu Tab Transitions */
+        .menu-tab {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .menu-tab::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background-color: #D4AF37;
+            transition: width 0.35s ease;
+        }
+        .menu-tab.active {
+            color: #D4AF37;
+        }
+        .menu-tab.active::after {
+            width: 100%;
+        }
+
+        /* Fade Animation for Menu Items */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Custom Form Inputs */
+        .luxury-input {
+            background-color: rgba(10, 10, 12, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            color: #F4F4F6;
+            transition: all 0.3s ease;
+        }
+        .luxury-input:focus {
+            outline: none;
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
+        }
+        /* Fix calendar icon color in dark mode */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.8) sepia(100%) saturate(300%) hue-rotate(10deg);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-obsidian">
+
+    <!-- ==========================================
+         1. STICKY GLASSMORPHIC NAVIGATION BAR
+    =========================================== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-9 h-9 rounded-full border border-gold/50 flex items-center justify-center bg-charcoal/80 group-hover:border-gold transition-colors">
+                        <span class="font-serif text-gold text-lg font-semibold tracking-wider">49</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-lg sm:text-xl tracking-[0.2em] text-alabaster font-semibold uppercase">
+                            Cloud Lounge
+                        </span>
+                        <span class="text-[10px] tracking-[0.35em] text-gold uppercase -mt-1">
+                            Jakarta &bull; Rooftop
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-[0.18em] text-silverMuted">
+                    <a href="#experience" class="hover:text-gold transition-colors py-2">The Experience</a>
+                    <a href="#menu" class="hover:text-gold transition-colors py-2">Menu</a>
+                    <a href="#vibe" class="hover:text-gold transition-colors py-2">Events & Dress Code</a>
+                    <a href="#location" class="hover:text-gold transition-colors py-2">Location</a>
+                </nav>
+
+                <!-- CTA & Mobile Toggle -->
+                <div class="flex items-center gap-3">
+                    <a href="#reservation" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] text-obsidian bg-gold-gradient rounded-lg hover:brightness-110 transition-all shadow-lg shadow-gold/10">
+                        Reserve a Table
+                    </a>
+                    
+                    <!-- Mobile Hamburger Button -->
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-lg border border-gold/25 text-alabaster hover:text-gold hover:border-gold transition-colors">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-obsidian/95 backdrop-blur-xl border-b border-gold/20 px-6 pt-4 pb-6 space-y-4">
+            <a href="#experience" class="mobile-link block text-xs uppercase tracking-[0.2em] text-silverMuted hover:text-gold py-2 border-b border-white/5">The Experience</a>
+            <a href="#menu" class="mobile-link block text-xs uppercase tracking-[0.2em] text-silverMuted hover:text-gold py-2 border-b border-white/5">Menu</a>
+            <a href="#vibe" class="mobile-link block text-xs uppercase tracking-[0.2em] text-silverMuted hover:text-gold py-2 border-b border-white/5">Events & Dress Code</a>
+            <a href="#location" class="mobile-link block text-xs uppercase tracking-[0.2em] text-silverMuted hover:text-gold py-2 border-b border-white/5">Location</a>
+            <a href="#reservation" class="mobile-link block w-full text-center mt-4 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-obsidian bg-gold-gradient rounded-lg">
+                Reserve a Table
+            </a>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         2. FULL-SCREEN ATMOSPHERIC HERO SECTION
+    =========================================== -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- High-Res Nighttime Cityscape & Rooftop Imagery -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2074&q=85" 
+                onerror="this.src='https://placehold.co/1920x1080/0A0A0C/D4AF37?text=Cloud+Lounge+Jakarta+49th+Floor'"
+                alt="Cloud Lounge Jakarta Rooftop Cityscape View" 
+                class="w-full h-full object-cover object-center scale-105 transform transition-transform duration-[20s] ease-out"
+            >
+            <!-- Atmospheric Dark Vignette & Radial Overlay -->
+            <div class="absolute inset-0 hero-vignette"></div>
+            <!-- Subtle Warm Amber Ambient Light -->
+            <div class="ambient-glow w-96 h-96 bg-gold/15 top-1/4 left-1/2 -translate-x-1/2"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-gold/30 bg-obsidian/60 backdrop-blur-md mb-6">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+                <span class="text-[11px] uppercase tracking-[0.28em] text-gold font-medium">
+                    49th Floor &bull; The Plaza Office Tower, Thamrin
+                </span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight text-alabaster leading-[1.08] mb-6">
+                Above the <span class="italic text-gold font-normal">Jakarta</span> Skyline
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-silverMuted font-light leading-relaxed mb-10">
+                Experience an elevated sanctuary in the clouds. Indulge in artisanal craft cocktails, wood-fired culinary creations, and unobstructed 360-degree nocturnal vistas of Central Jakarta.
+            </p>
+
+            <!-- Hero CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#reservation" class="w-full sm:w-auto px-8 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-obsidian bg-gold-gradient rounded-lg hover:brightness-110 transition-all shadow-xl shadow-gold/15">
+                    Reserve a Table
+                </a>
+                <a href="#menu" class="w-full sm:w-auto px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-alabaster border border-gold/40 bg-obsidian/50 backdrop-blur-md rounded-lg hover:border-gold hover:text-gold transition-all">
+                    Explore Menu
+                </a>
+            </div>
+
+            <!-- Subtle Key Quick-Facts Bar -->
+            <div class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-2xl mx-auto text-center">
+                <div>
+                    <p class="text-[10px] uppercase tracking-[0.25em] text-silverMuted mb-1">Altitude</p>
+                    <p class="font-serif text-lg sm:text-xl text-alabaster">Level 49 Rooftop</p>
+                </div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-[0.25em] text-silverMuted mb-1">Nightly Hours</p>
+                    <p class="font-serif text-lg sm:text-xl text-alabaster">18:00 – 02:00 WIB</p>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-[10px] uppercase tracking-[0.25em] text-silverMuted mb-1">Atmosphere</p>
+                    <p class="font-serif text-lg sm:text-xl text-gold">Smart Elegant</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#experience" aria-label="Scroll down" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-silverMuted hover:text-gold transition-colors animate-bounce">
+            <i class="fa-solid fa-chevron-down text-sm"></i>
+        </a>
+    </section>
+
+    <!-- ==========================================
+         3. THE EXPERIENCE (ABOUT & HIGHLIGHTS)
+    =========================================== -->
+    <section id="experience" class="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <!-- Ambient Glow -->
+        <div class="ambient-glow w-80 h-80 bg-amberWarm/10 top-20 right-10"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <p class="text-xs uppercase tracking-[0.3em] text-gold mb-3">The Experience</p>
+                    <h2 class="font-serif text-3xl sm:text-5xl text-alabaster font-medium leading-tight">
+                        Where Nocturnal Elegance Meets <span class="italic text-gold">The Horizon</span>
+                    </h2>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3.5 py-1.5 rounded-full text-xs border border-gold/30 bg-charcoal text-alabaster flex items-center gap-2">
+                        <i class="fa-regular fa-building text-gold"></i> 49th Floor
+                    </span>
+                    <span class="px-3.5 py-1.5 rounded-full text-xs border border-gold/30 bg-charcoal text-alabaster flex items-center gap-2">
+                        <i class="fa-regular fa-clock text-gold"></i> Open Daily 18:00 – 02:00
+                    </span>
+                </div>
+            </div>
+
+            <!-- 3-Column Luxury Feature Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl border border-gold/30 bg-obsidian flex items-center justify-center text-gold mb-8 group-hover:bg-gold group-hover:text-obsidian transition-colors">
+                            <i class="fa-solid fa-city text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-alabaster mb-3">360° City Skyline Views</h3>
+                        <p class="text-sm text-silverMuted leading-relaxed font-light">
+                            Perched atop Bundaran HI and Thamrin's iconic skyline, our open-air terrace offers Jakarta's most coveted vantage point from golden twilight into midnight.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-gold/80 tracking-widest uppercase">
+                        <span>Outdoor & Indoor</span>
+                        <span>Level 49</span>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl border border-gold/30 bg-obsidian flex items-center justify-center text-gold mb-8 group-hover:bg-gold group-hover:text-obsidian transition-colors">
+                            <i class="fa-solid fa-martini-glass-citrus text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-alabaster mb-3">Artisanal Craft Cocktails</h3>
+                        <p class="text-sm text-silverMuted leading-relaxed font-light">
+                            Curated by master mixologists using house-infused botanicals, rare single malts, and bespoke smoky infusions designed to elevate every conversation.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-gold/80 tracking-widest uppercase">
+                        <span>Bespoke Mixology</span>
+                        <span>Rare Spirits</span>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl border border-gold/30 bg-obsidian flex items-center justify-center text-gold mb-8 group-hover:bg-gold group-hover:text-obsidian transition-colors">
+                            <i class="fa-solid fa-utensils text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-alabaster mb-3">Global Tapas & Wood-Fired Pizza</h3>
+                        <p class="text-sm text-silverMuted leading-relaxed font-light">
+                            From blistered artisanal wood-fired truffle pizzas to premium Wagyu small plates, our kitchen crafts refined shareable dishes tailored for late-night dining.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-gold/80 tracking-widest uppercase">
+                        <span>Shareable Plates</span>
+                        <span>Artisanal Oven</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         4. INTERACTIVE MENU SHOWCASE
+    =========================================== -->
+    <section id="menu" class="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-charcoal/50 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <p class="text-xs uppercase tracking-[0.3em] text-gold mb-3">Curated Selections</p>
+                <h2 class="font-serif text-3xl sm:text-5xl text-alabaster font-medium mb-4">
+                    The Cloud 49 Menu
+                </h2>
+                <p class="text-sm text-silverMuted font-light">
+                    Crafted with prime ingredients and fine spirits. Prices are in thousands of Rupiah (IDR) and subject to service charge & government tax.
+                </p>
+            </div>
+
+            <!-- Interactive Category Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-10 border-b border-white/10 pb-4 mb-12" role="tablist">
+                <button onclick="filterMenu('cocktails')" id="tab-cocktails" class="menu-tab active text-xs sm:text-sm uppercase tracking-[0.2em] font-medium py-2 px-2 text-alabaster">
+                    Signature Cocktails
+                </button>
+                <button onclick="filterMenu('food')" id="tab-food" class="menu-tab text-xs sm:text-sm uppercase tracking-[0.2em] font-medium py-2 px-2 text-silverMuted hover:text-alabaster">
+                    Global Bites & Wood-Fired Pizza
+                </button>
+                <button onclick="filterMenu('wine')" id="tab-wine" class="menu-tab text-xs sm:text-sm uppercase tracking-[0.2em] font-medium py-2 px-2 text-silverMuted hover:text-alabaster">
+                    Wine & Spirits
+                </button>
+            </div>
+
+            <!-- Menu Items Grid (Populated via JS for smooth filtering) -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Dynamic Content Injected Here -->
+            </div>
+
+            <!-- Menu Footer Note -->
+            <div class="mt-12 text-center">
+                <p class="text-xs text-silverMuted italic">
+                    * Full bottle service menu, vintage champagne list, and non-alcoholic mocktails available upon request at the lounge.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         5. VIBE, DRESS CODE & WEEKLY EVENTS
+    =========================================== -->
+    <section id="vibe" class="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/5 overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="ambient-glow w-96 h-96 bg-gold/10 -bottom-20 -left-20"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+                
+                <!-- Left Column: Weekly Sounds & Sunset Sessions (7 cols) -->
+                <div class="lg:col-span-7 glass-card rounded-2xl p-8 sm:p-10 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-xs uppercase tracking-[0.28em] text-gold">Nocturnal Rhythm</span>
+                            <span class="px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-[11px] uppercase tracking-wider">
+                                Live DJ Nightly
+                            </span>
+                        </div>
+
+                        <h2 class="font-serif text-3xl sm:text-4xl text-alabaster mb-4">
+                            Sunset Sessions & After-Hours
+                        </h2>
+                        <p class="text-sm text-silverMuted font-light leading-relaxed mb-8">
+                            As dusk settles over Thamrin, resident selectors and guest international DJs curate a seamless progression from melodic sunset deep house to elevated nocturnal grooves.
+                        </p>
+
+                        <!-- Weekly Schedule List -->
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-xl bg-obsidian/70 border border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                <div>
+                                    <span class="text-[11px] uppercase tracking-widest text-gold block">Wednesday & Thursday</span>
+                                    <h4 class="font-serif text-xl text-alabaster">Velvet Skyline & Jazztronica</h4>
+                                </div>
+                                <span class="text-xs text-silverMuted font-mono">20:00 – 01:00 WIB</span>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-obsidian/70 border border-gold/25 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                <div>
+                                    <span class="text-[11px] uppercase tracking-widest text-amberWarm block">Friday & Saturday</span>
+                                    <h4 class="font-serif text-xl text-alabaster">Cloud 49 High-Altitude Sessions</h4>
+                                </div>
+                                <span class="text-xs text-gold font-mono">21:00 – 02:00 WIB</span>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-obsidian/70 border border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                <div>
+                                    <span class="text-[11px] uppercase tracking-widest text-gold block">Sunday – Tuesday</span>
+                                    <h4 class="font-serif text-xl text-alabaster">Golden Hour & Chill Lounge</h4>
+                                </div>
+                                <span class="text-xs text-silverMuted font-mono">18:00 – 00:30 WIB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/10 flex items-center gap-4">
+                        <img 
+                            src="https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?auto=format&fit=crop&w=400&q=80" 
+                            onerror="this.src='https://placehold.co/100x100/121418/D4AF37?text=DJ'"
+                            alt="DJ Booth Atmosphere" 
+                            class="w-14 h-14 rounded-xl object-cover border border-gold/30"
+                        >
+                        <div>
+                            <p class="text-xs text-alabaster font-medium">VIP Bottle Service & Private Celebrations</p>
+                            <p class="text-xs text-silverMuted font-light mt-0.5">Minimum spend applies for prime outdoor edge sofas on weekends.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Guest Etiquette & Dress Code Card (5 cols) -->
+                <div class="lg:col-span-5 rounded-2xl p-8 sm:p-10 bg-gradient-to-b from-charcoalLight to-obsidian border border-gold/30 flex flex-col justify-between relative overflow-hidden">
+                    <!-- Subtle decorative corner ring -->
+                    <div class="absolute -top-16 -right-16 w-48 h-48 rounded-full border border-gold/15 pointer-events-none"></div>
+
+                    <div>
+                        <div class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold mb-6">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+
+                        <p class="text-xs uppercase tracking-[0.28em] text-gold mb-2">House Policy</p>
+                        <h3 class="font-serif text-3xl text-alabaster mb-4">
+                            Guest Etiquette & Dress Code
+                        </h3>
+                        <p class="text-sm text-silverMuted font-light leading-relaxed mb-6">
+                            To preserve our refined nocturnal atmosphere, we kindly ask all guests to adhere to our <strong class="text-alabaster font-medium">Smart Casual / Elegant</strong> dress code.
+                        </p>
+
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                <span class="text-alabaster/90 font-light">Collared shirts, tailored trousers, elegant dresses, and smart closed-toe footwear are encouraged.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-xmark text-red-400/90 mt-1 text-xs"></i>
+                                <span class="text-silverMuted font-light">Strictly <strong class="text-alabaster font-normal">no sandals, flip-flops, sleeveless shirts, athletic wear, or shorts</strong> for gentlemen.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-id-card text-gold mt-1 text-xs"></i>
+                                <span class="text-alabaster/90 font-light"><strong class="text-gold font-medium">21+ Only after 21:00 WIB.</strong> Valid government-issued ID or passport may be requested at the lobby lift.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 p-4 rounded-xl bg-obsidian/90 border border-gold/20 text-xs text-silverMuted leading-relaxed">
+                        <span class="text-gold font-medium uppercase tracking-wider block mb-1">Private Lift Access</span>
+                        Proceed to The Plaza Office Tower Main Lobby concierge for dedicated high-speed elevator access to Level 49.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         6. INTERACTIVE TABLE RESERVATION SECTION
+    =========================================== -->
+    <section id="reservation" class="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-charcoal/60 border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <p class="text-xs uppercase tracking-[0.3em] text-gold mb-3">Table Reservations</p>
+                <h2 class="font-serif text-3xl sm:text-5xl text-alabaster font-medium mb-4">
+                    Secure Your Vantage Point
+                </h2>
+                <p class="text-sm text-silverMuted font-light">
+                    Reserve your table above the city lights. Complete your preferences below for an instant booking summary and direct WhatsApp confirmation with our host team.
+                </p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-6 sm:p-10 md:p-12 shadow-2xl">
+                <form id="booking-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Date -->
+                        <div>
+                            <label for="res-date" class="block text-xs uppercase tracking-[0.18em] text-silverMuted mb-2">
+                                Date <span class="text-gold">*</span>
+                            </label>
+                            <input type="date" id="res-date" required class="luxury-input w-full px-4 py-3.5 rounded-xl text-sm">
+                        </div>
+
+                        <!-- Time -->
+                        <div>
+                            <label for="res-time" class="block text-xs uppercase tracking-[0.18em] text-silverMuted mb-2">
+                                Arrival Time <span class="text-gold">*</span>
+                            </label>
+                            <select id="res-time" required class="luxury-input w-full px-4 py-3.5 rounded-xl text-sm">
+                                <option value="18:00 WIB (Sunset)">18:00 WIB (Sunset Hour)</option>
+                                <option value="19:00 WIB">19:00 WIB</option>
+                                <option value="20:00 WIB" selected>20:00 WIB (Prime Evening)</option>
+                                <option value="21:00 WIB">21:00 WIB</option>
+                                <option value="22:00 WIB">22:00 WIB</option>
+                                <option value="23:00 WIB">23:00 WIB</option>
+                                <option value="00:00 WIB">00:00 WIB</option>
+                                <option value="01:00 WIB">01:00 WIB</option>
+                            </select>
+                        </div>
+
+                        <!-- Number of Guests -->
+                        <div class="sm:col-span-2 lg:col-span-1">
+                            <label for="res-guests" class="block text-xs uppercase tracking-[0.18em] text-silverMuted mb-2">
+                                Number of Guests <span class="text-gold">*</span>
+                            </label>
+                            <select id="res-guests" required class="luxury-input w-full px-4 py-3.5 rounded-xl text-sm">
+                                <option value="2 Guests">2 Guests</option>
+                                <option value="3 Guests">3 Guests</option>
+                                <option value="4 Guests" selected>4 Guests</option>
+                                <option value="6 Guests">6 Guests</option>
+                                <option value="8 Guests">8 Guests</option>
+                                <option value="10+ VIP Group">10+ VIP Group</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Guest Name -->
+                        <div>
+                            <label for="res-name" class="block text-xs uppercase tracking-[0.18em] text-silverMuted mb-2">
+                                Guest Full Name <span class="text-gold">*</span>
+                            </label>
+                            <input type="text" id="res-name" placeholder="e.g., Alexander Wijaya" required class="luxury-input w-full px-4 py-3.5 rounded-xl text-sm">
+                        </div>
+
+                        <!-- Seating Preference -->
+                        <div>
+                            <label for="res-seating" class="block text-xs uppercase tracking-[0.18em] text-silverMuted mb-2">
+                                Seating Preference <span class="text-gold">*</span>
+                            </label>
+                            <select id="res-seating" required class="luxury-input w-full px-4 py-3.5 rounded-xl text-sm">
+                                <option value="Outdoor Rooftop Edge">Outdoor Rooftop Edge (Skyline View)</option>
+                                <option value="Indoor Lounge">Indoor Lounge (Air-Conditioned)</option>
+                                <option value="VIP Sofa Section">VIP Sofa Section (Bottle Service)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Special Requests -->
+                    <div>
+                        <label for="res-notes" class="block text-xs uppercase tracking-[0.18em] text-silverMuted mb-2">
+                            Special Requests / Occasion (Optional)
+                        </label>
+                        <textarea id="res-notes" rows="2" placeholder="Birthday celebration, anniversary, dietary preferences, or specific table request..." class="luxury-input w-full px-4 py-3 rounded-xl text-sm"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <p class="text-xs text-silverMuted">
+                            <i class="fa-solid fa-shield-halved text-gold mr-1.5"></i>
+                            Tables are held for 20 minutes past reservation time.
+                        </p>
+                        <button type="submit" class="w-full sm:w-auto px-8 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-obsidian bg-gold-gradient rounded-xl hover:brightness-110 transition-all shadow-lg shadow-gold/15 cursor-pointer">
+                            Generate Reservation
+                        </button>
+                    </div>
+                </form>
+
+                <!-- On-Screen Reservation Summary & WhatsApp Confirmation Box (Hidden initially) -->
+                <div id="confirmation-panel" class="hidden mt-8 pt-8 border-t border-gold/30 animate-fade-up">
+                    <div class="rounded-2xl bg-obsidian border border-gold/40 p-6 sm:p-8">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gold/20 border border-gold flex items-center justify-center text-gold">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] uppercase tracking-[0.25em] text-gold block">Request Prepared</span>
+                                    <h3 class="font-serif text-2xl text-alabaster">Reservation Summary</h3>
+                                </div>
+                            </div>
+                            <span id="booking-ref" class="text-xs font-mono text-silverMuted bg-charcoal px-3 py-1.5 rounded-lg border border-white/10">
+                                REF: #CL49-8821
+                            </span>
+                        </div>
+
+                        <!-- Summary Details Grid -->
+                        <div id="summary-details" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-6 text-sm">
+                            <!-- Filled dynamically -->
+                        </div>
+
+                        <!-- Action Buttons: Direct WhatsApp & Copy -->
+                        <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+                            <a id="whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-obsidian font-semibold text-xs uppercase tracking-[0.16em] transition-all shadow-lg">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                Confirm via WhatsApp (+62 812-8250-4949)
+                            </a>
+                            <button type="button" onclick="copyBookingText()" id="copy-btn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl border border-gold/40 text-alabaster hover:border-gold hover:text-gold text-xs uppercase tracking-[0.16em] transition-all">
+                                <i class="fa-regular fa-copy"></i>
+                                <span id="copy-label">Copy Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         7. LOCATION & LUXURY FOOTER
+    =========================================== -->
+    <footer id="location" class="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-obsidian border-t border-gold/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+                
+                <!-- Brand & Address (5 cols) -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-alabaster font-semibold uppercase block">
+                            Cloud Lounge
+                        </span>
+                        <span class="text-xs tracking-[0.35em] text-gold uppercase">
+                            Jakarta &bull; cloudloungejakarta.com
+                        </span>
+                    </div>
+
+                    <p class="text-sm text-silverMuted font-light leading-relaxed">
+                        The Plaza Office Tower, 49th Floor<br>
+                        Jl. M.H. Thamrin Kav. 28–30, Gondangdia<br>
+                        Menteng, Jakarta Pusat 10350, Indonesia
+                    </p>
+
+                    <div class="space-y-2.5 text-sm">
+                        <p class="text-alabaster flex items-center gap-3">
+                            <i class="fa-regular fa-clock text-gold w-4"></i>
+                            <span>Open Daily: <strong>18:00 – 02:00 WIB</strong></span>
+                        </p>
+                        <p class="text-alabaster flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-gold w-4"></i>
+                            <a href="https://wa.me/6281282504949" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">
+                                +62 812-8250-4949 (RSVP & VIP Inquiries)
+                            </a>
+                        </p>
+                        <p class="text-alabaster flex items-center gap-3">
+                            <i class="fa-regular fa-envelope text-gold w-4"></i>
+                            <a href="mailto:reservation@cloudloungejakarta.com" class="hover:text-gold transition-colors">
+                                reservation@cloudloungejakarta.com
+                            </a>
+                        </p>
+                        <p class="text-silverMuted flex items-center gap-3">
+                            <i class="fa-solid fa-circle-info text-gold w-4"></i>
+                            <a href="mailto:info@cloudloungejakarta.com" class="hover:text-gold transition-colors">
+                                info@cloudloungejakarta.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Styled Interactive Map Card + Google Maps Embed (7 cols) -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative overflow-hidden">
+                        <!-- Decorative stylized grid lines mimicking dark map -->
+                        <div class="absolute inset-0 opacity-15 pointer-events-none" style="background-image: radial-gradient(#D4AF37 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+                        <div class="relative z-10 space-y-2 max-w-md">
+                            <div class="inline-flex items-center gap-2 text-xs text-gold uppercase tracking-widest">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Bundaran HI &bull; Central Jakarta</span>
+                            </div>
+                            <h3 class="font-serif text-2xl text-alabaster">The Plaza Office Tower, 49F</h3>
+                            <p class="text-xs text-silverMuted leading-relaxed">
+                                Located directly adjacent to Plaza Indonesia & Grand Hyatt Jakarta. Valet parking available at The Plaza main drop-off.
+                            </p>
+                        </div>
+
+                        <a href="https://www.google.com/maps/place/Cloud+Lounge+Jakarta+(Rooftop)/@-6.1927834,106.7847762,14z/data=!4m7!3m6!1s0x2e69f4213fa91b1d:0x8f490b554b1236d2!8m2!3d-6.1927858!4d106.8227712" target="_blank" rel="noopener noreferrer" class="relative z-10 w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl border border-gold text-gold hover:bg-gold hover:text-obsidian text-xs font-semibold uppercase tracking-[0.16em] transition-all shrink-0">
+                            <span>Open in Google Maps</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Embedded Dark-Styled Google Maps Frame -->
+                    <div class="rounded-2xl overflow-hidden border border-gold/25 h-64 w-full bg-charcoal relative">
+                        <iframe 
+                            title="Cloud Lounge Jakarta (Rooftop) Location Map"
+                            src="https://maps.google.com/maps?q=Cloud%20Lounge%20Jakarta%20(Rooftop),%20The%20Plaza%20Office%20Tower,%20Jakarta&t=&z=17&ie=UTF8&iwloc=B&output=embed" 
+                            class="w-full h-full border-0 filter invert-[90%] hue-rotate-180 contrast-[105%] opacity-90 hover:opacity-100 transition-opacity"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright & Socials -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-silverMuted">
+                <p>&copy; 2026 <a href="https://cloudloungejakarta.com" class="text-gold hover:underline">cloudloungejakarta.com</a> &mdash; Cloud Lounge Jakarta (Rooftop). All Rights Reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#experience" class="hover:text-gold transition-colors">Experience</a>
+                    <a href="#menu" class="hover:text-gold transition-colors">Menu</a>
+                    <a href="#vibe" class="hover:text-gold transition-colors">Dress Code</a>
+                    <a href="#reservation" class="hover:text-gold transition-colors">Reservations</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         JAVASCRIPT INTERACTIVITY & LOGIC
+    =========================================== -->
+    <script>
+        // 1. Curated Menu Dataset
+        const menuData = {
+            cocktails: [
+                {
+                    name: "Cloud 49 Signature Negroni",
+                    price: "IDR 210K",
+                    tag: "House Signature",
+                    desc: "London dry gin infused with roasted cacao nibs, sweet vermouth, Campari, finished with aromatic orange cedar smoke."
+                },
+                {
+                    name: "Thamrin Sunset Spritz",
+                    price: "IDR 195K",
+                    tag: "Refreshing",
+                    desc: "Artisanal aperitivo, blood orange reduction, passionfruit essence, topped with chilled Prosecco and dehydrated citrus."
+                },
+                {
+                    name: "Midnight Over Bundaran HI",
+                    price: "IDR 225K",
+                    tag: "Smoky & Bold",
+                    desc: "12-year highland single malt, spiced palm sugar, Angostura & black walnut bitters, served over a hand-carved crystal sphere."
+                },
+                {
+                    name: "Botanical Sky Martini",
+                    price: "IDR 205K",
+                    tag: "Crisp",
+                    desc: "Small-batch vodka, elderflower liqueur, crushed Indonesian lemongrass, kaffir lime leaf oil, and dry vermouth mist."
+                },
+                {
+                    name: "Velvet Espresso Noir",
+                    price: "IDR 200K",
+                    tag: "After-Dinner",
+                    desc: "Aged dark rum, cold-brewed Toraja specialty espresso, coffee blossom liqueur, and salted vanilla bean crema."
+                },
+                {
+                    name: "Golden Horizon Margarita",
+                    price: "IDR 215K",
+                    tag: "Spicy-Citrus",
+                    desc: "Reposado tequila, wildflower honey, fresh calamansi juice, Cointreau, rimmed with smoked sea salt and chili dust."
+                }
+            ],
+            food: [
+                {
+                    name: "Truffle Mushroom Wood-Fired Pizza",
+                    price: "IDR 245K",
+                    tag: "Chef's Signature",
+                    desc: "48-hour fermented sourdough crust, roasted wild forest mushrooms, fior di latte, shaved black truffle, and aged Parmesan."
+                },
+                {
+                    name: "Wagyu Beef Sliders (3 pcs)",
+                    price: "IDR 235K",
+                    tag: "Guest Favorite",
+                    desc: "Australian MB7+ Wagyu patties, caramelized shallots, aged gruyère, black garlic aioli on toasted brioche buns."
+                },
+                {
+                    name: "Prosciutto & Burrata Wood-Fired Pizza",
+                    price: "IDR 265K",
+                    tag: "Artisanal Oven",
+                    desc: "San Marzano tomato base, creamy Apulian burrata, thinly sliced beef prosciutto, wild rocket, and balsamic glaze."
+                },
+                {
+                    name: "Crispy Calamari & Sea Salt Pepper",
+                    price: "IDR 165K",
+                    tag: "Tapas",
+                    desc: "Tender squid rings flash-fried with Szechuan pepper, bird's eye chili, spring onions, and roasted garlic saffron dip."
+                },
+                {
+                    name: "Pan-Seared Hokkaido Scallops",
+                    price: "IDR 285K",
+                    tag: "Small Plate",
+                    desc: "Caramelized jumbo scallops served over cauliflower silk purée, crispy beef pancetta crumbs, and herb brown butter."
+                },
+                {
+                    name: "Truffle Parmesan Hand-Cut Fries",
+                    price: "IDR 135K",
+                    tag: "Bar Bites",
+                    desc: "Double-cooked Russet potatoes tossed in white truffle oil, 24-month Parmigiano-Reggiano, and fresh rosemary."
+                }
+            ],
+            wine: [
+                {
+                    name: "Dom Pérignon Vintage Brut",
+                    price: "IDR 6.800K",
+                    tag: "Champagne • Bottle",
+                    desc: "Épernay, France. Luminous notes of white stone fruit, toasted brioche, and refined mineral tension."
+                },
+                {
+                    name: "Cloudy Bay Sauvignon Blanc",
+                    price: "IDR 1.450K",
+                    tag: "White Wine • Bottle",
+                    desc: "Marlborough, New Zealand. Vibrant expressions of kaffir lime, white peach, and crisp tropical acidity."
+                },
+                {
+                    name: "Penfolds Bin 389 Cabernet Shiraz",
+                    price: "IDR 2.450K",
+                    tag: "Red Wine • Bottle",
+                    desc: "South Australia. Rich dark berry fruit, balanced oak spice, and velvety tannins ideal for evening pairings."
+                },
+                {
+                    name: "Macallan 12 Years Double Cask",
+                    price: "IDR 3.600K",
+                    tag: "Single Malt • Bottle",
+                    desc: "Speyside, Scotland. Harmonious notes of honeyed citrus, ginger spice, and warm vanilla oak."
+                },
+                {
+                    name: "Clase Azul Reposado Tequila",
+                    price: "IDR 5.900K",
+                    tag: "Ultra-Premium • Bottle",
+                    desc: "Jalisco, Mexico. Slow-cooked agave aged in oak barrels with silky hazelnut, vanilla, and clove undertones."
+                },
+                {
+                    name: "Sommelier's Wine by the Glass",
+                    price: "IDR 190K",
+                    tag: "Red / White / Sparkling",
+                    desc: "Curated rotating pour of Old and New World selections served at cellar temperature."
+                }
+            ]
+        };
+
+        // 2. Render Menu Function with Smooth Animation
+        function filterMenu(category) {
+            const grid = document.getElementById('menu-grid');
+            const tabs = document.querySelectorAll('.menu-tab');
+
+            // Update active tab styling
+            tabs.forEach(tab => {
+                tab.classList.remove('active', 'text-alabaster');
+                tab.classList.add('text-silverMuted');
+            });
+            const activeTab = document.getElementById(`tab-${category}`);
+            if (activeTab) {
+                activeTab.classList.add('active', 'text-alabaster');
+                activeTab.classList.remove('text-silverMuted');
+            }
+
+            // Clear & populate items
+            grid.innerHTML = '';
+            const items = menuData[category] || [];
+
+            items.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'p-6 rounded-2xl bg-obsidian/80 border border-gold/15 hover:border-gold/45 transition-all flex flex-col justify-between animate-fade-up';
+                card.style.animationDelay = `${index * 60}ms`;
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-start justify-between gap-4 mb-2">
+                            <h3 class="font-serif text-xl sm:text-2xl text-alabaster font-medium leading-snug">
+                                ${item.name}
+                            </h3>
+                            <span class="font-mono text-sm text-gold font-semibold shrink-0 pt-1">
+                                ${item.price}
+                            </span>
+                        </div>
+                        <span class="inline-block text-[10px] uppercase tracking-[0.2em] text-amberWarm/90 mb-3">
+                            ${item.tag}
+                        </span>
+                        <p class="text-xs sm:text-sm text-silverMuted font-light leading-relaxed">
+                            ${item.desc}
+                        </p>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // 3. Mobile Navigation Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 4. Reservation Form Logic & WhatsApp Generator
+        let formattedSummaryText = '';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize default menu tab
+            filterMenu('cocktails');
+
+            // Set default date to today (or tomorrow if late night)
+            const dateInput = document.getElementById('res-date');
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0');
+            const dd = String(today.getDate()).padStart(2, '0');
+            const minDate = `${yyyy}-${mm}-${dd}`;
+            dateInput.min = minDate;
+            dateInput.value = minDate;
+        });
+
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const dateRaw = document.getElementById('res-date').value;
+            const time = document.getElementById('res-time').value;
+            const guests = document.getElementById('res-guests').value;
+            const name = document.getElementById('res-name').value.trim();
+            const seating = document.getElementById('res-seating').value;
+            const notes = document.getElementById('res-notes').value.trim() || 'None';
+
+            // Format readable date
+            const dateObj = new Date(dateRaw + 'T00:00:00');
+            const formattedDate = dateObj.toLocaleDateString('en-GB', {
+                weekday: 'short',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+
+            // Generate random reference code
+            const randomCode = Math.floor(1000 + Math.random() * 9000);
+            const refCode = `CL49-${randomCode}`;
+            document.getElementById('booking-ref').textContent = `REF: #${refCode}`;
+
+            // Render summary cards
+            const summaryContainer = document.getElementById('summary-details');
+            summaryContainer.innerHTML = `
+                <div class="p-3.5 rounded-xl bg-charcoal border border-white/5">
+                    <span class="text-[10px] uppercase tracking-widest text-silverMuted block">Guest Name</span>
+                    <span class="text-alabaster font-medium">${escapeHTML(name)}</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-charcoal border border-white/5">
+                    <span class="text-[10px] uppercase tracking-widest text-silverMuted block">Date & Time</span>
+                    <span class="text-alabaster font-medium">${formattedDate} &bull; ${time}</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-charcoal border border-white/5">
+                    <span class="text-[10px] uppercase tracking-widest text-silverMuted block">Party & Area</span>
+                    <span class="text-gold font-medium">${guests} (${seating})</span>
+                </div>
+                <div class="sm:col-span-2 md:col-span-3 p-3.5 rounded-xl bg-charcoal border border-white/5">
+                    <span class="text-[10px] uppercase tracking-widest text-silverMuted block">Special Requests</span>
+                    <span class="text-silverMuted font-light">${escapeHTML(notes)}</span>
+                </div>
+            `;
+
+            // Compose WhatsApp message
+            formattedSummaryText = 
+`Hello Cloud Lounge Jakarta (49th Floor), I would like to confirm a table reservation via cloudloungejakarta.com:
+
+• Ref ID: #${refCode}
+• Name: ${name}
+• Date: ${formattedDate}
+• Time: ${time}
+• Guests: ${guests}
+• Seating: ${seating}
+• Notes: ${notes}
+
+Thank you.`;
+
+            const waNumber = '6281282504949';
+            const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(formattedSummaryText)}`;
+            document.getElementById('whatsapp-btn').href = waUrl;
+
+            // Show confirmation panel and scroll smoothly to it
+            const panel = document.getElementById('confirmation-panel');
+            panel.classList.remove('hidden');
+            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+
+        // Copy details fallback using document.execCommand('copy') for iframe compatibility
+        function copyBookingText() {
+            if (!formattedSummaryText) return;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = formattedSummaryText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+                const label = document.getElementById('copy-label');
+                label.textContent = 'Copied!';
+                setTimeout(() => {
+                    label.textContent = 'Copy Details';
+                }, 2500);
+            } catch (err) {
+                console.error('Copy failed', err);
+            }
+            document.body.removeChild(tempTextArea);
+        }
+
+        // Basic XSS sanitization helper
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, tag => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#39;',
+                '"': '&quot;'
+            }[tag]));
+        }
+    </script>
+</body>
+</html>

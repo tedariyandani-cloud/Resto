@@ -1,0 +1,6 @@
+{
+  "name": "Cloud Lounge Jakarta",
+  "description": "Experience Jakarta's premier 49th-floor rooftop lounge & dining at The Plaza Office Tower, Thamrin. Artisanal cocktails, wood-fired pizza, and 360° skyline views.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
